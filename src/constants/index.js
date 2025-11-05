@@ -54,12 +54,18 @@ import {
 
 
 import datathon from "../assets/datathon.png";
-
+import datathonthumbnail from "../assets/datathon-thumbnail.png";
 import mlusion from "../assets/mlusion.jpg";
+import mlusionthumbnail from "../assets/mlusion-thumbnail.jpg";
 import kaggle from "../assets/kaggle.jpg";
+import kagglethumbnail from "../assets/kaggle-thumbnail.jpg";
 import synapse from "../assets/synapse.jpg";
+import synapsethumbnail from "../assets/synapse-thumbnail.jpg";
 import math from "../assets/math.jpg";
+import maththumbnail from "../assets/math-thumbnail.jpg";
 import workshop from "../assets/workshop.jpg";
+import workshopthumbnail from "../assets/workshop-thumbnail.jpg";
+
 
 
 export const navigation = [
@@ -260,68 +266,150 @@ export const pricing = [
   },
 ];
 
+// export const eventsData = [
+//   {
+//     id: 1,
+//     title: "Datathon 2025",
+//     shortDescription: "24-hour data challenge pushing boundaries of AI insights.",
+//     description:
+//       "AICVS Datathon 2025 brings together data enthusiasts, coders, and analysts to solve real-world problems through creative datasets and machine learning.",
+//     date: "January 14–15, 2025",
+//     thumbnail: datathonthumbnail,
+//     banner: datathon,
+//     borderColor: "#851b6d", // pink glow
+//   },
+//   {
+//     id: 2,
+//     title: "Mlusion",
+//     shortDescription: "Exploring the intersection of AI and mixed reality.",
+//     description:
+//       "Mlusion celebrates the fusion of motion and illusion — where immersive technology meets AI-driven creativity.",
+//     date: "February 9, 2025",
+//     thumbnail: mlusionthumbnail,
+//     banner: mlusion,
+//     borderColor: "#5c5cc1", // blue glow
+//   },
+//   {
+//     id: 3,
+//     title: "Synapse",
+//     shortDescription: "Annual flagship techfest uniting innovation and intellect.",
+//     description:
+//       "Synapse 2025 is where future-forward thinkers showcase research, innovation, and interactive sessions in AI, robotics, and web tech.",
+//     date: "March 1–3, 2025",
+//     thumbnail: synapsethumbnail,
+//     banner: synapse,
+//     borderColor: "#fdf3e9", // light orange glow
+//   },
+//   {
+//     id: 4,
+//     title: "Kaggle Competition",
+//     shortDescription: "Compete, predict, and dominate data challenges.",
+//     description:
+//       "Test your data science and model-building skills against the best minds — an exclusive AICVS-hosted Kaggle competition.",
+//     date: "March 15–20, 2025",
+//     thumbnail: kagglethumbnail,
+//     banner: kaggle,
+//     borderColor: "#f2f4f5", // light azure glow
+//   },
+//   {
+//     id: 5,
+//     title: "AICVS × Math Club",
+//     shortDescription: "Mathematics meets Machine Learning.",
+//     description:
+//       "A crossover event where AI and math merge — exploring optimization, neural math, and algorithmic beauty in modern computing.",
+//     date: "April 10, 2025",
+//     thumbnail: maththumbnail,
+//     banner: math,
+//     borderColor: "#346ca3", // blue glow
+//   },
+//   {
+//     id: 6,
+//     title: "Workshops on Gen AI",
+//     shortDescription: "Hands-on sessions with tools like Gemini, ChatGPT, and DALL·E.",
+//     description:
+//       "Get practical experience building with Generative AI — fine-tuning prompts, creating art, and exploring multimodal models.",
+//     date: "May 6–8, 2025",
+//     thumbnail: workshopthumbnail,
+//     banner: workshop,
+//     borderColor: "#585d8c", // blue glow
+//   },
+// ];
+
 export const eventsData = [
   {
     id: 1,
-    title: "Datathon 2025",
-    shortDescription: "24-hour data challenge pushing boundaries of AI insights.",
+    title: "Datathon",
+    shortDescription:
+      "A 3-day AI & ML hackathon solving real-world data challenges.",
     description:
-      "AICVS Datathon 2025 brings together data enthusiasts, coders, and analysts to solve real-world problems through creative datasets and machine learning.",
-    date: "January 14–15, 2025",
-    thumbnail: datathon,
+      "Datathon 2025 is a high-stakes AI and Data Science hackathon where teams tackle real-world problems through multiple rounds — from online quizzes to offline project building and final presentations before industry experts. Compete, innovate, and showcase your data skills for exciting rewards!",
+    date: "April",
+    thumbnail: datathonthumbnail,
     banner: datathon,
+    borderColor: "#851b6d", // pink glow
   },
   {
     id: 2,
-    title: "Mlusion",
-    shortDescription: "Exploring the intersection of AI and mixed reality.",
+    title: "MLusion",
+    shortDescription:
+      "An ML project showcase for creative and curious innovators.",
     description:
-      "Mlusion celebrates the fusion of motion and illusion — where immersive technology meets AI-driven creativity.",
-    date: "February 9, 2025",
-    thumbnail: mlusion,
+      "MLusion is an online Machine Learning project event designed to spotlight innovation and problem-solving. Participants submit projects across domains like finance, cybersecurity, health, and agriculture — sharing their ideas, models, and outcomes to inspire the ML community.",
+    date: "April - May",
+    thumbnail: mlusionthumbnail,
     banner: mlusion,
+    borderColor: "#5c5cc1", // blue glow
   },
   {
     id: 3,
     title: "Synapse",
-    shortDescription: "Annual flagship techfest uniting innovation and intellect.",
+    shortDescription:
+      "Interactive AI/ML sessions in collaboration with GDG Cummins.",
     description:
-      "Synapse 2025 is where future-forward thinkers showcase research, innovation, and interactive sessions in AI, robotics, and web tech.",
-    date: "March 1–3, 2025",
-    thumbnail: synapse,
+      "Synapse — Bridging Minds and Machines — is a hands-on learning experience featuring co-teaching sessions on ML and NLP. Conducted with GDG Cummins, it blends practical workshops, teamwork, and concept-building to help participants explore AI in action.",
+    date: "March",
+    thumbnail: synapsethumbnail,
     banner: synapse,
+    borderColor: "#fdf3e9", // light orange glow
   },
   {
     id: 4,
     title: "Kaggle Competition",
-    shortDescription: "Compete, predict, and dominate data challenges.",
+    shortDescription:
+      "Compete, learn, and grow through real-world data challenges.",
     description:
-      "Test your data science and model-building skills against the best minds — an exclusive AICVS-hosted Kaggle competition.",
-    date: "March 15–20, 2025",
-    thumbnail: kaggle,
+      "The AICVS Kaggle Competition is a platform for aspiring data scientists to test their skills, explore datasets, and climb the leaderboard. Participants engage in learning-driven challenges that foster collaboration, experimentation, and problem-solving in machine learning.",
+    date: "December",
+    thumbnail: kagglethumbnail,
     banner: kaggle,
+    borderColor: "#f2f4f5", // light azure glow
   },
   {
     id: 5,
     title: "AICVS × Math Club",
-    shortDescription: "Mathematics meets Machine Learning.",
+    shortDescription:
+      "Where mathematics meets the art of machine learning.",
     description:
-      "A crossover event where AI and math merge — exploring optimization, neural math, and algorithmic beauty in modern computing.",
-    date: "April 10, 2025",
-    thumbnail: math,
+      "A collaborative event by AICVS and Math Club exploring the math behind AI — from optimization and probability to the geometry of neural networks. It bridges theoretical understanding with the practical design of intelligent systems.",
+    date: "",
+    thumbnail: maththumbnail,
     banner: math,
+    borderColor: "#346ca3", // blue glow
   },
   {
     id: 6,
     title: "Workshops on Gen AI",
-    shortDescription: "Hands-on sessions with tools like Gemini, ChatGPT, and DALL·E.",
+    shortDescription:
+      "Explore Gen AI tools through practical, hands-on sessions.",
     description:
-      "Get practical experience building with Generative AI — fine-tuning prompts, creating art, and exploring multimodal models.",
-    date: "May 6–8, 2025",
-    thumbnail: workshop,
+      "AICVS Workshops on Generative AI provide interactive learning experiences with tools like ChatGPT, Gemini, and computer vision frameworks. Participants dive into prompt design, model creation, and the future of AI-powered creativity through guided expert sessions.",
+    date: "",
+    thumbnail: workshopthumbnail,
     banner: workshop,
+    borderColor: "#585d8c", // blue glow
   },
 ];
+
 
 
 
