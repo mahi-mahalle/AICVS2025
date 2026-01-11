@@ -124,21 +124,21 @@ const PodiumSpot = ({ name, height, color, delay, isCenter = false, icon, medalL
   const initials = name.split(' ').map(n => n[0]).join('');
 
   return (
-    <div className={`flex flex-col items-center ${isCenter ? 'z-20 scale-105' : 'z-10'} w-full md:w-72 ${className}`}>
+    <div className={`flex flex-col items-center ${isCenter ? 'z-20 scale-[1.02] md:scale-105' : 'z-10'} w-1/3 md:w-72 ${className}`}>
       
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: delay + 0.3, duration: 0.8 }}
-        className="flex flex-col items-center mb-6 relative"
+        className="flex flex-col items-center mb-4 md:mb-6 relative"
       >
-        <div className={`relative mb-4 group`}>
+        <div className={`relative mb-2 md:mb-4 group`}>
           <motion.div 
             animate={{ y: [0, -8, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className={`w-16 h-16 md:w-24 md:h-24 rounded-full border-2 p-1 ${isCenter ? 'border-yellow-400/50' : 'border-white/20'} bg-white/5 backdrop-blur-md flex items-center justify-center relative overflow-hidden`}
+            className={`w-10 h-10 sm:w-16 sm:h-16 md:w-24 md:h-24 rounded-full border md:border-2 p-0.5 md:p-1 ${isCenter ? 'border-yellow-400/50' : 'border-white/20'} bg-white/5 backdrop-blur-md flex items-center justify-center relative overflow-hidden`}
           >
-            <div className={`w-full h-full rounded-full flex items-center justify-center font-bold text-lg md:text-2xl ${isCenter ? 'bg-yellow-400/20 text-yellow-200' : 'bg-white/10 text-gray-300'}`}>
+            <div className={`w-full h-full rounded-full flex items-center justify-center font-bold text-[10px] sm:text-xs md:text-2xl ${isCenter ? 'bg-yellow-400/20 text-yellow-200' : 'bg-white/10 text-gray-300'}`}>
               {initials}
             </div>
             
@@ -151,24 +151,24 @@ const PodiumSpot = ({ name, height, color, delay, isCenter = false, icon, medalL
           <motion.div 
             animate={{ scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity }}
-            className="absolute -top-2 -right-2 bg-[#0a0e27] p-1.5 rounded-full border border-white/10 shadow-xl"
+            className="absolute -top-1 -right-1 bg-[#0a0e27] p-0.5 md:p-1.5 rounded-full border border-white/10 shadow-xl"
           >
-            {icon}
+            {React.cloneElement(icon, { size: undefined, className: "w-3 h-3 md:w-6 md:h-6" })}
           </motion.div>
         </div>
 
-        <div className="text-center px-4">
-          <h3 className={`font-black tracking-tight leading-none mb-1 ${isCenter ? 'text-2xl md:text-3xl text-yellow-300' : 'text-lg md:text-xl text-white'}`}>
+        <div className="text-center px-1 md:px-4">
+          <h3 className={`font-black tracking-tight leading-none mb-0.5 md:mb-1 truncate w-full max-w-[80px] sm:max-w-none ${isCenter ? 'text-[10px] sm:text-sm md:text-3xl text-yellow-300' : 'text-[9px] sm:text-[11px] md:text-xl text-white'}`}>
             {name}
           </h3>
-          <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
+          <p className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
             {isCenter ? "Champion" : "Finalist"}
           </p>
         </div>
       </motion.div>
 
       
-      <div className="relative w-full max-w-[200px] md:max-w-none px-4 md:px-0">
+      <div className="relative w-full px-1 md:px-0">
         <motion.div
           initial={{ scaleY: 0 }}
           animate={{ scaleY: 1 }}
@@ -177,13 +177,13 @@ const PodiumSpot = ({ name, height, color, delay, isCenter = false, icon, medalL
             delay, 
             ease: [0.16, 1, 0.3, 1] 
           }}
-          className={`origin-bottom w-full ${height} rounded-t-3xl bg-gradient-to-b ${color} shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.5)] relative overflow-hidden group`}
+          className={`origin-bottom w-full ${height} rounded-t-xl md:rounded-t-3xl bg-gradient-to-b ${color} shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.5)] relative overflow-hidden group`}
         >
-          <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
-             <span className="text-6xl md:text-8xl font-black select-none tracking-tighter opacity-40 text-white leading-none">
+          <div className="absolute top-2 md:top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
+             <span className="text-3xl sm:text-5xl md:text-8xl font-black select-none tracking-tighter opacity-40 text-white leading-none">
                {medalLabel[0]}
              </span>
-             <span className="text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-white/60 -mt-2">
+             <span className="hidden sm:block text-[8px] md:text-sm font-bold uppercase tracking-[0.3em] text-white/60 -mt-2">
                Place
              </span>
           </div>
@@ -200,7 +200,7 @@ const PodiumSpot = ({ name, height, color, delay, isCenter = false, icon, medalL
         </motion.div>
 
 
-        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-6 bg-purple-600/20 blur-2xl rounded-full" />
+        <div className="absolute -bottom-4 md:-bottom-8 left-1/2 -translate-x-1/2 w-[90%] h-3 md:h-6 bg-purple-600/20 blur-xl md:blur-2xl rounded-full" />
       </div>
     </div>
   );
@@ -283,7 +283,7 @@ const App = () => {
     <div className="relative bg-[#050816] min-h-screen text-white font-sans selection:bg-purple-500/30 overflow-x-hidden">
       <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" />
       
-      {/* Dynamic Background Glows */}
+
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-full h-[600px] bg-purple-600/10 blur-[150px] rounded-full" />
         <div className="absolute top-[40%] -left-[10%] w-[500px] h-[500px] bg-cyan-500/5 blur-[120px] rounded-full" />
@@ -298,7 +298,7 @@ const App = () => {
 
       <main className="relative z-10 pt-32 pb-32 px-6 max-w-7xl mx-auto">
 
-        <section className="text-center mb-16">
+        <section className="text-center mb-8 md:mb-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -334,22 +334,22 @@ const App = () => {
         </section>
 
         {/* PODIUM SECTION */}
-        <section className="relative mt-24">
+        <section className="relative mt-8 md:mt-24">
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full bg-yellow-400/5 blur-[120px] rounded-full pointer-events-none" />
           
-          <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-16 md:gap-0 min-h-[600px]">
+          <div className="flex flex-row items-end justify-center gap-2 md:gap-0 min-h-[400px] md:min-h-[600px] max-w-5xl mx-auto">
 
             <PodiumSpot 
               key={`${activeTab}-silver`}
               name={winners.silver} 
               rank="Silver" 
-              height="h-44 md:h-56" 
+              height="h-32 md:h-56" 
               color="from-slate-400/80 to-slate-800/90" 
               delay={0.4} 
-              icon={<Medal className="text-slate-300" size={24} />}
+              icon={<Medal className="text-slate-300" />}
               medalLabel="2nd"
-              className="order-2 md:order-1"
+              className="order-1"
             />
 
 
@@ -357,13 +357,13 @@ const App = () => {
               key={`${activeTab}-gold`}
               name={winners.gold} 
               rank="Gold" 
-              height="h-56 md:h-80" 
+              height="h-44 md:h-80" 
               color="from-yellow-400/90 via-yellow-600/90 to-amber-900/95" 
               delay={0.2} 
               isCenter={true}
-              icon={<Crown className="text-yellow-400" size={32} />}
+              icon={<Crown className="text-yellow-400" />}
               medalLabel="1st"
-              className="order-1 md:order-2"
+              className="order-2"
             />
 
 
@@ -371,12 +371,12 @@ const App = () => {
               key={`${activeTab}-bronze`}
               name={winners.bronze} 
               rank="Bronze" 
-              height="h-32 md:h-40" 
+              height="h-24 md:h-40" 
               color="from-orange-600/80 to-orange-950/95" 
               delay={0.6} 
-              icon={<Medal className="text-orange-400" size={24} />}
+              icon={<Medal className="text-orange-400" />}
               medalLabel="3rd"
-              className="order-3 md:order-3"
+              className="order-3"
             />
           </div>
         </section>
